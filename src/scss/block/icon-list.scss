@@ -1,0 +1,18 @@
+@use "../config/variables" as *;
+@use "../mixins/desktop" as *;
+@use "../mixins/to-desktop" as *;
+
+.icon-list {
+    display: grid;
+    justify-items: center;
+    gap: 56px;
+    margin-bottom: 9rem;
+    // flex-direction: column;
+    // flex-wrap: wrap;
+
+    & img {
+        width: 40%;
+     
+
+    }
+}

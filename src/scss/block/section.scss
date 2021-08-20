@@ -1,0 +1,25 @@
+@use "../config/variables" as *;
+@use "../mixins/desktop" as *;
+@use "../mixins/to-desktop" as *;
+
+.section {
+    // margin-bottom: 10rem;
+
+    & img{
+        margin-bottom: 4.2rem;
+        margin-top: 56px;
+    }
+
+    &__title{
+        font-size: 1.7rem;
+        margin-bottom:1.2rem;
+    }
+
+    &__text{
+        line-height: 1.5;
+        // margin-bottom: 5rem;
+
+      
+    }
+}
+

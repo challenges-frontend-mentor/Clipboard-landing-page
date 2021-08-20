@@ -1,0 +1,15 @@
+@use "../config/variables" as *;
+@use "../mixins/desktop" as *;
+@use "../mixins/to-desktop" as *;
+
+.article{
+
+    &__title{
+        margin-bottom: 1rem;
+    }
+
+    &__text{
+        margin-bottom: 2.7rem;
+        line-height: 1.5;
+    }
+}

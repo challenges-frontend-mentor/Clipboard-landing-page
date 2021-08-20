@@ -1,0 +1,26 @@
+@use "../config/variables" as *;
+@use "../mixins/desktop" as *;
+@use "../mixins/to-desktop" as *;
+
+.header{
+    margin-top: 8.6rem;
+    margin-bottom: 10.6rem;
+
+    & img {
+        margin-bottom: 3.2rem;
+    }
+}
+
+.title{
+    color: var(--title);
+    font-weight: 600;
+    margin-bottom: 1.4rem;
+}
+
+.subtitle{
+    color: var(--text);
+    font-weight: 400;
+    word-spacing: 1px;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+}

@@ -6,6 +6,8 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        include ../block/font-google
+        link(rel="stylesheet", href="css/style.css")
         title Landing page
     body 
         include ../block/header
@@ -24,9 +26,24 @@ html(lang="en")
                     +article("Plain text snippets","Remove unwanted formatting from copied text for a consistent look.","assets/images/icon-text.svg")
                     +article("Sneak preview","Quick preview of all snippets on your Clipboard for easy access.","assets/images/icon-preview.svg")
             .icon-list 
-            img(src="assets/images/image-devices.png", alt="")
-            img(src="assets/images/image-devices.png", alt="")
-            img(src="assets/images/image-devices.png", alt="")
-            img(src="assets/images/image-devices.png", alt="")
-            img(src="assets/images/image-devices.png", alt="")
-            +section("Clipboard for iOS and Mac OS","Available for free on the App Store. Download for Mac or iOS, sync with iCloud and you´re ready to start adding to your clipboard.") 
+                img(src="assets/images/logo-google.png", alt="")
+                img(src="assets/images/logo-ibm.png", alt="")
+                img(src="assets/images/logo-microsoft.png", alt="")
+                img(src="assets/images/logo-hp.png", alt="")
+                img(src="assets/images/logo-vector-graphics.png", alt="")
+            +section("Clipboard for iOS and Mac OS","Available for free on the App Store. Download for Mac or iOS, sync with iCloud and you´re ready to start adding to your clipboard.")
+                a(href="#").buttom.buttom--green Download for iOS
+                a(href="#").buttom.buttom--purple Download for Mac 
+        footer.footer 
+            img(src="assets/images/logo.svg", alt="")
+            ul.footer__links 
+                li.footer__item 
+                    a(href="#").footer__link FAQs 
+                    a(href="#").footer__link Privarcy Policy
+                    a(href="#").footer__link Install Guide 
+                    a(href="#").footer__link Contact Us
+                    a(href="#").footer__link Press Kit
+            .footer__social 
+                img(src="assets/images/icon-facebooksvg", alt="")
+                img(src="assets/images/icon-twitter.svg", alt="")
+                img(src="assets/images/icon-instagram", alt="")

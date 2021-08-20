@@ -1,0 +1,54 @@
+@use "../config/variables" as *;
+@use "../mixins/desktop" as *;
+@use "../mixins/to-desktop" as *;
+
+*{
+    box-sizing: border-box;
+
+}
+
+body,
+h1, h2, h3,
+ul,
+p {
+  margin: 0;
+  color: var(--text);
+}
+
+h1, h2, h3{
+    color: var(--title);
+}
+
+ul {
+  list-style-type: none;
+}
+
+body{
+    font-family: 'Bai Jamjuree', sans-serif;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../assets/images/bg-header-mobile.png);
+    
+    
+    @include to-desktop{
+        text-align: center;
+        padding:  0 31px;
+    }
+    
+    @include desktop{
+        background-image: url(../assets/images/bg-header-desktop.png);
+
+    }
+}
+
+ul{
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+  }
+
+img {
+    max-width: 100%;
+  }
