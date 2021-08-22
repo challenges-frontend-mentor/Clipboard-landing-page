@@ -1,0 +1,44 @@
+@use "../config/variables" as *;
+@use "../mixins/desktop" as *;
+@use "../mixins/to-desktop" as *;
+
+.footer {
+    background-color: var(--light-gray);
+    // background-color: red;
+    margin-top: 10.5rem;
+    padding-top: 3rem;
+    margin-left: -31px;
+    margin-right: -31px;
+    // padding-left: 3rem;
+
+    & img{
+        width: 55px;
+        // padding-bottom: 2rem;
+    }
+
+    &__social{
+       
+        padding-bottom: 3rem;
+        & img{
+            width: 25px;
+
+            &:nth-child(2){
+                margin-left: 40px;
+                margin-right: 40px; 
+
+            }
+        }
+    }
+
+    &__item{
+        display: grid;
+        margin-bottom:2rem;
+        font-size: 18px;
+    }
+    
+    &__link{
+        color: var(--on-light-gray);
+        padding-top: 2rem;
+
+    }
+}
