@@ -3,42 +3,89 @@
 @use "../mixins/to-desktop" as *;
 
 .footer {
+
+    @include to-desktop{
+        margin-left: -31px;
+        margin-right: -31px;
+        padding-top: 3rem;
+
+    }
+    @include desktop{
+        display:flex;
+        justify-content: space-between;
+        align-content: center;
+        padding: 50px 224px 50px 241px;
+    }
+
     background-color: var(--light-gray);
     // background-color: red;
     margin-top: 10.5rem;
-    padding-top: 3rem;
-    margin-left: -31px;
-    margin-right: -31px;
     // padding-left: 3rem;
 
     & img{
         width: 55px;
+        align-self: center;
         // padding-bottom: 2rem;
     }
 
     &__social{
+        @include desktop{
+            display:flex;
+            align-content: center;
+        }
+        @include to-desktop{
+            padding-bottom: 3rem;
+
+        }
        
-        padding-bottom: 3rem;
+
         & img{
             width: 25px;
 
-            &:nth-child(2){
-                margin-left: 40px;
-                margin-right: 40px; 
-
+            @include to-desktop{
+                &:nth-child(2){
+                    margin-left: 40px;
+                    margin-right: 40px; 
+    
+                }
             }
+
+            @include desktop{
+                &:nth-child(2){
+                    margin-left: 25px;
+                    margin-right: 25px; 
+            }
+        }
         }
     }
 
     &__item{
         display: grid;
-        margin-bottom:2rem;
+
+        @include desktop{
+            // grid-template-columns:repeat(6, 1fr);
+            grid-template-rows:repeat(2, 1fr);
+            gap: 20px 80px;
+            grid-auto-flow: column;
+            margin-left: -170px;
+        }
+
+        @include to-desktop{
+            margin-bottom:2rem;
+
+        }
         font-size: 18px;
     }
     
     &__link{
+        @include to-desktop{
+            padding-top: 2rem;
+
+        }
+       
         color: var(--on-light-gray);
-        padding-top: 2rem;
+
+
 
     }
 }

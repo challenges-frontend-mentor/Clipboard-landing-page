@@ -4,15 +4,30 @@
 
 .icon-list {
     display: grid;
-    justify-items: center;
-    gap: 56px;
+    @include to-desktop{
+        justify-items: center;
+        gap: 56px;
+    
+       
+    }
+
+    @include desktop{
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+        align-items: center;
+       
+    }
     margin-bottom: 9rem;
     // flex-direction: column;
     // flex-wrap: wrap;
 
+    
     & img {
-        width: 40%;
-     
-
+        @include to-desktop{
+            width: 40%;
+        }
     }
 }

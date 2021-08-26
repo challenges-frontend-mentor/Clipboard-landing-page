@@ -3,23 +3,71 @@
 @use "../mixins/to-desktop" as *;
 
 .section {
+    @include desktop{
+        // text-align: center;
+     }
+    
     // margin-bottom: 10rem;
 
     & img{
-        margin-bottom: 4.2rem;
-        margin-top: 56px;
+        @include to-desktop{
+            margin-top: 56px;
+            margin-bottom: 4.2rem;
+         }
     }
+
+    & > img {
+        @include desktop{
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5rem;
+            // margin-top: 56px;
+            margin-bottom: 4.2rem;
+            // background-color:red;
+
+         }
+    }
+
+    // & > .buttom{
+    //     text-align: center;
+    // }
 
     &__title{
         font-size: 1.7rem;
         margin-bottom:1.2rem;
+
+        @include desktop{
+            text-align: center;
+            font-size: 2.2rem;
+        }
     }
 
     &__text{
         line-height: 1.5;
         // margin-bottom: 5rem;
-
+        
+        @include desktop{
+            font-size: 1.1rem;
+            width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            line-height: 1.7;
+            
+        }
       
     }
+
+    &__last{
+        @include desktop{
+            text-align: center;
+
+        }
+    }
+
+
 }
+
+
 
